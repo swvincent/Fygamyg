@@ -76,5 +76,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fygdb\fygdb.csproj">
+      <Project>{7704e08c-40f0-438f-a079-73a3b43977aa}</Project>
+      <Name>fygdb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fygmodels\fygmodels.csproj">
+      <Project>{216e48a5-9366-487e-9606-1cd6105c65ec}</Project>
+      <Name>fygmodels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
