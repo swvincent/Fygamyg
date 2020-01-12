@@ -1,10 +1,9 @@
-﻿using fygmodels;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace fygdb
+namespace fygmodels
 {
     class FygContext : DbContext
     {
@@ -12,7 +11,7 @@ namespace fygdb
 
         public FygContext()
         {
-            //TODO: Should use this or migrations?
+            // TODO: Switch to migrations
             Database.EnsureCreated();
         }
 
@@ -29,5 +28,4 @@ namespace fygdb
             modelBuilder.Entity<JournalEntry>().ToTable("JournalEntries");
         }
     }
-}
 }
