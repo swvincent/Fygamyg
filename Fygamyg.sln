@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fygwin", "fygwin\fygwin.csproj", "{C4EEBCB6-DA0B-47D2-9FC9-532CFC5BFD1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fygwin", "src\fygwin\fygwin.csproj", "{C4EEBCB6-DA0B-47D2-9FC9-532CFC5BFD1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fygmodels", "fygmodels\fygmodels.csproj", "{216E48A5-9366-487E-9606-1CD6105C65EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fygmodels", "src\fygmodels\fygmodels.csproj", "{216E48A5-9366-487E-9606-1CD6105C65EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fydb", "fydb\fydb.csproj", "{7704E08C-40F0-438F-A079-73A3B43977AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fygdb", "src\fygdb\fygdb.csproj", "{7704E08C-40F0-438F-A079-73A3B43977AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
