@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace fygmodels
+namespace fygdb.models
 {
     class FygContext : DbContext
     {
