@@ -17,23 +17,47 @@ namespace fygwin
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void SaveBotton_Click(object sender, EventArgs e)
-        {
-            JournalEntry j = new JournalEntry();
-
-            j.Book = bookTextBox.Text;
-            j.Chapter = int.Parse(chapterTextBox.Text);
-            j.BeginVerse = int.Parse(beginVerseTextBox.Text);
-            j.EndVerse = int.Parse(endVerseTextBox.Text);
-            j.Title = titleTextBox.Text;
-            j.NoteText = noteTextBox.Text;
 
             using (var helper = new FygHelper())
             {
-                j = helper.AddJournalEntry(j);
-                MessageBox.Show(j.ID.ToString());
+                bookComboBox.DataSource = helper.GetAllBooks();
+                bookComboBox.DisplayMember = "BookName";
+                bookComboBox.ValueMember = "BookId";
+
+                comboBox1.DataSource = helper.GetAllEntryTypes();
+                comboBox1.DisplayMember = "EntryTypeName";
+                comboBox1.ValueMember = "EntryTypeId";
+            }
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                JournalEntry j = new JournalEntry();
+
+                j.BookId = int.Parse(bookComboBox.SelectedValue.ToString());
+                j.Chapter = int.Parse(chapterTextBox.Text);
+                j.BeginVerse = int.Parse(beginVerseTextBox.Text);
+                j.EndVerse = int.Parse(endVerseTextBox.Text);
+                j.EntryTypeId = int.Parse(comboBox1.SelectedValue.ToString());
+                j.Title = titleTextBox.Text;
+                j.NoteText = noteTextBox.Text;
+
+                using (var helper = new FygHelper())
+                {
+                    j = helper.AddJournalEntry(j);
+                    dbStatusLabel.Text = $"Saved with ID {j.JournalEntryId}";
+                }
+
+                // Reset
+                titleTextBox.Text = null;
+                noteTextBox.Text = null;
+                bookComboBox.Focus();
+            }
+            catch (Exception caught)
+            {
+                MessageBox.Show($"Exception occured: {caught.Message}");
             }
         }
     }

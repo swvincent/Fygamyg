@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using fygdb.models;
 
@@ -7,7 +8,7 @@ namespace fygdb
 {
     public class FygHelper : IDisposable
     {
-        private FygContext context;
+        private readonly FygContext context;
 
         public FygHelper()
         {
@@ -20,6 +21,16 @@ namespace fygdb
             context.SaveChanges();
 
             return journalEntry;
+        }
+
+        public List<Book> GetAllBooks()
+        {
+            return context.Books.OrderBy(b => b.BookId).ToList();
+        }
+
+        public List<EntryType> GetAllEntryTypes()
+        {
+            return context.EntryTypes.OrderBy(e => e.EntryTypeId).ToList();
         }
 
         #region IDisposable Support
