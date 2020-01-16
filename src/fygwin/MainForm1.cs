@@ -12,9 +12,9 @@ using fygdb.models;
 
 namespace fygwin
 {
-    public partial class MainForm : Form
+    public partial class MainForm1 : Form
     {
-        public MainForm()
+        public MainForm1()
         {
             InitializeComponent();
 
