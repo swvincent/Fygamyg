@@ -33,8 +33,8 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.entriesListView = new System.Windows.Forms.ListView();
+            this.entryTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -79,8 +79,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.entriesListView, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.entryTextBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -104,29 +104,29 @@
             this.panel1.Size = new System.Drawing.Size(754, 32);
             this.panel1.TabIndex = 0;
             // 
-            // listView1
+            // entriesListView
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.entriesListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 41);
-            this.listView1.Name = "listView1";
-            this.tableLayoutPanel1.SetRowSpan(this.listView1, 2);
-            this.listView1.Size = new System.Drawing.Size(293, 277);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.entriesListView.HideSelection = false;
+            this.entriesListView.Location = new System.Drawing.Point(3, 41);
+            this.entriesListView.Name = "entriesListView";
+            this.tableLayoutPanel1.SetRowSpan(this.entriesListView, 2);
+            this.entriesListView.Size = new System.Drawing.Size(293, 277);
+            this.entriesListView.TabIndex = 1;
+            this.entriesListView.UseCompatibleStateImageBehavior = false;
             // 
-            // textBox2
+            // entryTextBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.entryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(314, 41);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(443, 248);
-            this.textBox2.TabIndex = 3;
+            this.entryTextBox.Location = new System.Drawing.Point(314, 41);
+            this.entryTextBox.Multiline = true;
+            this.entryTextBox.Name = "entryTextBox";
+            this.entryTextBox.Size = new System.Drawing.Size(443, 248);
+            this.entryTextBox.TabIndex = 3;
             // 
             // button1
             // 
@@ -266,9 +266,9 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView entriesListView;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox entryTextBox;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
         private System.Windows.Forms.ToolStripButton openToolStripButton;

@@ -15,15 +15,25 @@ namespace fygdb
             context = new FygContext();
         }
 
-        public List<JournalEntry> GetJournalEntries(int bookId, int chapter, int firstVerse, int lastVerse)
+        public List<JournalEntry> GetJournalEntries(int bookId, int chapter, int beginVerse, int endVerse)
         {
             var q = context.JournalEntries
                 .Where(j => j.BookId == bookId);
 
             if (chapter > 0)
+            { 
                 q = q.Where(j => j.Chapter == chapter);
 
-            //TODO: Filter verses
+                if (beginVerse > 0 && endVerse > 0)
+                {
+                    q = q.Where(j => (j.BeginVerse >= beginVerse && j.BeginVerse <= endVerse) ||
+                        (j.EndVerse >= beginVerse && j.EndVerse <= endVerse));
+                }
+            }
+            else
+            {
+                q = q.Where(j => j.Chapter == 0);
+            }
 
             return q.ToList();
         }
