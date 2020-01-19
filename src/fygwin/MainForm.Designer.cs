@@ -61,10 +61,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lookup:";
             // 
-            // textBox1
+            // searchTextBox
             // 
             this.searchTextBox.Location = new System.Drawing.Point(53, 3);
-            this.searchTextBox.Name = "textBox1";
+            this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(401, 20);
             this.searchTextBox.TabIndex = 1;
             this.searchTextBox.Leave += new System.EventHandler(this.searchTextBox_Leave);
