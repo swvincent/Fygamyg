@@ -46,15 +46,14 @@
             this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.entriesGridView = new System.Windows.Forms.DataGridView();
-            this.bookColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chapterColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.versesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entriesListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.entriesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +85,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.entryTextBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.entriesGridView, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.entriesListView, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -231,47 +230,41 @@
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
             // 
-            // entriesGridView
+            // entriesListView
             // 
-            this.entriesGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.entriesListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entriesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.entriesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookColumn,
-            this.chapterColumn,
-            this.versesColumn,
-            this.titleColumn});
-            this.entriesGridView.Location = new System.Drawing.Point(3, 41);
-            this.entriesGridView.Name = "entriesGridView";
-            this.entriesGridView.Size = new System.Drawing.Size(293, 248);
-            this.entriesGridView.TabIndex = 4;
+            this.entriesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.entriesListView.HideSelection = false;
+            this.entriesListView.Location = new System.Drawing.Point(3, 41);
+            this.entriesListView.Name = "entriesListView";
+            this.entriesListView.Size = new System.Drawing.Size(293, 248);
+            this.entriesListView.TabIndex = 4;
+            this.entriesListView.UseCompatibleStateImageBehavior = false;
+            this.entriesListView.View = System.Windows.Forms.View.Details;
             // 
-            // bookColumn
+            // columnHeader1
             // 
-            this.bookColumn.DataPropertyName = "Book.BookName";
-            this.bookColumn.HeaderText = "Book";
-            this.bookColumn.Name = "bookColumn";
+            this.columnHeader1.Text = "Book";
             // 
-            // chapterColumn
+            // columnHeader2
             // 
-            this.chapterColumn.DataPropertyName = "ChapterText";
-            this.chapterColumn.HeaderText = "Ch.";
-            this.chapterColumn.Name = "chapterColumn";
-            this.chapterColumn.Width = 30;
+            this.columnHeader2.Text = "Ch.";
+            this.columnHeader2.Width = 30;
             // 
-            // versesColumn
+            // columnHeader3
             // 
-            this.versesColumn.DataPropertyName = "VersesText";
-            this.versesColumn.HeaderText = "Verse(s)";
-            this.versesColumn.Name = "versesColumn";
-            this.versesColumn.Width = 50;
+            this.columnHeader3.Text = "Verse(s)";
             // 
-            // titleColumn
+            // columnHeader4
             // 
-            this.titleColumn.DataPropertyName = "Title";
-            this.titleColumn.HeaderText = "Title";
-            this.titleColumn.Name = "titleColumn";
+            this.columnHeader4.Text = "Title";
+            this.columnHeader4.Width = 120;
             // 
             // MainForm
             // 
@@ -289,7 +282,6 @@
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.entriesGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,10 +306,10 @@
         private System.Windows.Forms.ToolStripButton pasteToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
-        private System.Windows.Forms.DataGridView entriesGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chapterColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn versesColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleColumn;
+        private System.Windows.Forms.ListView entriesListView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
