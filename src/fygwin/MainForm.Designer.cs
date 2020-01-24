@@ -33,7 +33,6 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.entriesListView = new System.Windows.Forms.ListView();
             this.entryTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -47,9 +46,15 @@
             this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.entriesGridView = new System.Windows.Forms.DataGridView();
+            this.bookColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chapterColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.versesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.entriesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,9 +84,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.entriesListView, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.entryTextBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.entriesGridView, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -103,19 +108,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(754, 32);
             this.panel1.TabIndex = 0;
-            // 
-            // entriesListView
-            // 
-            this.entriesListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.entriesListView.HideSelection = false;
-            this.entriesListView.Location = new System.Drawing.Point(3, 41);
-            this.entriesListView.Name = "entriesListView";
-            this.tableLayoutPanel1.SetRowSpan(this.entriesListView, 2);
-            this.entriesListView.Size = new System.Drawing.Size(293, 277);
-            this.entriesListView.TabIndex = 1;
-            this.entriesListView.UseCompatibleStateImageBehavior = false;
             // 
             // entryTextBox
             // 
@@ -239,6 +231,48 @@
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
             // 
+            // entriesGridView
+            // 
+            this.entriesGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.entriesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.entriesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookColumn,
+            this.chapterColumn,
+            this.versesColumn,
+            this.titleColumn});
+            this.entriesGridView.Location = new System.Drawing.Point(3, 41);
+            this.entriesGridView.Name = "entriesGridView";
+            this.entriesGridView.Size = new System.Drawing.Size(293, 248);
+            this.entriesGridView.TabIndex = 4;
+            // 
+            // bookColumn
+            // 
+            this.bookColumn.DataPropertyName = "Book.BookName";
+            this.bookColumn.HeaderText = "Book";
+            this.bookColumn.Name = "bookColumn";
+            // 
+            // chapterColumn
+            // 
+            this.chapterColumn.DataPropertyName = "ChapterText";
+            this.chapterColumn.HeaderText = "Ch.";
+            this.chapterColumn.Name = "chapterColumn";
+            this.chapterColumn.Width = 30;
+            // 
+            // versesColumn
+            // 
+            this.versesColumn.DataPropertyName = "VersesText";
+            this.versesColumn.HeaderText = "Verse(s)";
+            this.versesColumn.Name = "versesColumn";
+            this.versesColumn.Width = 50;
+            // 
+            // titleColumn
+            // 
+            this.titleColumn.DataPropertyName = "Title";
+            this.titleColumn.HeaderText = "Title";
+            this.titleColumn.Name = "titleColumn";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +289,7 @@
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.entriesGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +301,6 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView entriesListView;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox entryTextBox;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -280,5 +314,10 @@
         private System.Windows.Forms.ToolStripButton pasteToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
+        private System.Windows.Forms.DataGridView entriesGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chapterColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn versesColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleColumn;
     }
 }

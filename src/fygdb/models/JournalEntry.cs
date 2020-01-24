@@ -16,5 +16,39 @@ namespace fygdb.models
 
         public int EntryTypeId { get; set; }
         public EntryType EntryType { get; set; }
+
+        public string VersesText
+        {
+            get
+            {
+                if (HasVerses())
+                    return InternalVersesText();
+                else
+                    return "";
+            }
+        }
+
+        public string ChapterText
+        {
+            get
+            {
+                if (HasChapter())
+                    return Chapter.ToString();
+                else
+                    return "";
+            }
+        }
+
+        public bool HasVerses() => BeginVerse > 0 && EndVerse > 0;
+
+        private string InternalVersesText()
+        {
+            if (BeginVerse != EndVerse)
+                return $"{BeginVerse}-{EndVerse}";
+            else
+                return BeginVerse.ToString();
+        }
+
+        public bool HasChapter() => Chapter > 0;
     }
 }

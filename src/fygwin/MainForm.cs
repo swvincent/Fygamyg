@@ -66,9 +66,11 @@ namespace fygwin
         {
             searchTextBox.Text = bibleRef.ToString();
 
-            var resuls = GetJournalEntriesForReference(bibleRef);
+            var results = GetJournalEntriesForReference(bibleRef);
 
             //TODO: populate listview
+
+
         }
 
         private List<JournalEntry> GetJournalEntriesForReference(Reference r)
