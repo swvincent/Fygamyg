@@ -93,7 +93,7 @@ namespace fygwin
                 endVerse = r.Verses.Max();
             }
 
-            using (var helper = new FygHelper())
+            using (var helper = new JournalEntryHelper())
             {
                 return helper.GetJournalEntries(r.Book.BookNumber, r.Chapter, beginVerse, endVerse);
             }

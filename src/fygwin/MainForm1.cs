@@ -18,12 +18,15 @@ namespace fygwin
         {
             InitializeComponent();
 
-            using (var helper = new FygHelper())
+            using (var helper = new BookHelper())
             {
                 bookComboBox.DataSource = helper.GetAllBooks();
                 bookComboBox.DisplayMember = "BookName";
                 bookComboBox.ValueMember = "BookId";
+            }
 
+            using (var helper = new EntryTypeHelper())
+            {
                 comboBox1.DataSource = helper.GetAllEntryTypes();
                 comboBox1.DisplayMember = "EntryTypeName";
                 comboBox1.ValueMember = "EntryTypeId";
@@ -44,7 +47,7 @@ namespace fygwin
                 j.Title = titleTextBox.Text;
                 j.NoteText = noteTextBox.Text;
 
-                using (var helper = new FygHelper())
+                using (var helper = new JournalEntryHelper())
                 {
                     j = helper.AddJournalEntry(j);
                     dbStatusLabel.Text = $"Saved with ID {j.JournalEntryId}";

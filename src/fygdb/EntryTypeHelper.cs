@@ -1,56 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using fygdb.models;
 using Microsoft.EntityFrameworkCore;
 
 namespace fygdb
 {
-    public class FygHelper : IDisposable
+    public class EntryTypeHelper : IDisposable
     {
         private readonly FygContext context;
 
-        public FygHelper()
+        public EntryTypeHelper()
         {
             context = new FygContext();
-        }
-
-        public List<JournalEntry> GetJournalEntries(int bookId, int chapter, int beginVerse, int endVerse)
-        {
-            var q = context.JournalEntries
-                .Where(j => j.BookId == bookId);
-
-            if (chapter > 0)
-            { 
-                q = q.Where(j => j.Chapter == chapter);
-
-                if (beginVerse > 0 && endVerse > 0)
-                {
-                    q = q.Where(j => (j.BeginVerse >= beginVerse && j.BeginVerse <= endVerse) ||
-                        (j.EndVerse >= beginVerse && j.EndVerse <= endVerse));
-                }
-            }
-            else
-            {
-                q = q.Where(j => j.Chapter == 0);
-            }
-
-            return q.Include(j => j.Book)
-                .ToList();
-        }
-
-        public JournalEntry AddJournalEntry(JournalEntry journalEntry)
-        {
-            context.JournalEntries.Add(journalEntry);
-            context.SaveChanges();
-
-            return journalEntry;
-        }
-
-        public List<Book> GetAllBooks()
-        {
-            return context.Books.OrderBy(b => b.BookId).ToList();
         }
 
         public List<EntryType> GetAllEntryTypes()
@@ -98,5 +61,6 @@ namespace fygdb
         }
 
         #endregion
+
     }
 }
