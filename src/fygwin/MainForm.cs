@@ -68,7 +68,16 @@ namespace fygwin
 
             var results = GetJournalEntriesForReference(bibleRef);
 
-            //TODO: populate listview
+            entriesListView.Items.Clear();
+
+            foreach (var r in results)
+            {
+                var values = new string[] { r.Book.BookName, r.ChapterText, r.VersesText, r.Title };
+
+                var l = new ListViewItem(values);
+
+                entriesListView.Items.Add(l);
+            }
 
 
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using fygdb.models;
+using Microsoft.EntityFrameworkCore;
 
 namespace fygdb
 {
@@ -35,7 +36,8 @@ namespace fygdb
                 q = q.Where(j => j.Chapter == 0);
             }
 
-            return q.ToList();
+            return q.Include(j => j.Book)
+                .ToList();
         }
 
         public JournalEntry AddJournalEntry(JournalEntry journalEntry)

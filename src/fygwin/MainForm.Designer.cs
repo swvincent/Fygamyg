@@ -35,6 +35,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.entryTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.entriesListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -46,11 +51,6 @@
             this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.entriesListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -128,6 +128,43 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // entriesListView
+            // 
+            this.entriesListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.entriesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.entriesListView.FullRowSelect = true;
+            this.entriesListView.HideSelection = false;
+            this.entriesListView.Location = new System.Drawing.Point(3, 41);
+            this.entriesListView.Name = "entriesListView";
+            this.entriesListView.Size = new System.Drawing.Size(293, 248);
+            this.entriesListView.TabIndex = 4;
+            this.entriesListView.UseCompatibleStateImageBehavior = false;
+            this.entriesListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Book";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ch.";
+            this.columnHeader2.Width = 30;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Verse(s)";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Title";
+            this.columnHeader4.Width = 120;
             // 
             // toolStrip1
             // 
@@ -229,42 +266,6 @@
             this.helpToolStripButton.Name = "helpToolStripButton";
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
-            // 
-            // entriesListView
-            // 
-            this.entriesListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.entriesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.entriesListView.HideSelection = false;
-            this.entriesListView.Location = new System.Drawing.Point(3, 41);
-            this.entriesListView.Name = "entriesListView";
-            this.entriesListView.Size = new System.Drawing.Size(293, 248);
-            this.entriesListView.TabIndex = 4;
-            this.entriesListView.UseCompatibleStateImageBehavior = false;
-            this.entriesListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Book";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Ch.";
-            this.columnHeader2.Width = 30;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Verse(s)";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Title";
-            this.columnHeader4.Width = 120;
             // 
             // MainForm
             // 
