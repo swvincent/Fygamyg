@@ -115,15 +115,20 @@ namespace fygwin
         {
             currentJournalEntry = j;
 
-            if (currentJournalEntry != null)
+            bool isEntryLoaded = (currentJournalEntry != null);
+
+            titleTextBox.Enabled = isEntryLoaded;
+            entryTextBox.Enabled = isEntryLoaded;
+
+            if (isEntryLoaded)
             {
+                titleTextBox.Text = currentJournalEntry.Title;
                 entryTextBox.Text = currentJournalEntry.NoteText;
-                entryTextBox.Enabled = true;
             }
             else
             {
+                titleTextBox.Clear();
                 entryTextBox.Clear();
-                entryTextBox.Enabled = false;
             }
         }
     }

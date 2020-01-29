@@ -52,7 +52,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.headerPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
             this.entryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.lookupPanel.SuspendLayout();
@@ -148,6 +148,7 @@
             this.entriesListView.FullRowSelect = true;
             this.entriesListView.HideSelection = false;
             this.entriesListView.Location = new System.Drawing.Point(3, 41);
+            this.entriesListView.MultiSelect = false;
             this.entriesListView.Name = "entriesListView";
             this.tableLayoutPanel1.SetRowSpan(this.entriesListView, 2);
             this.entriesListView.Size = new System.Drawing.Size(333, 448);
@@ -281,20 +282,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.headerPanel.Controls.Add(this.entryDateTimePicker);
-            this.headerPanel.Controls.Add(this.textBox1);
+            this.headerPanel.Controls.Add(this.titleTextBox);
             this.headerPanel.Location = new System.Drawing.Point(354, 41);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(503, 23);
             this.headerPanel.TabIndex = 5;
             // 
-            // textBox1
+            // titleTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.titleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(2, 1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(391, 20);
-            this.textBox1.TabIndex = 0;
+            this.titleTextBox.Location = new System.Drawing.Point(2, 1);
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.Size = new System.Drawing.Size(391, 20);
+            this.titleTextBox.TabIndex = 0;
             // 
             // entryDateTimePicker
             // 
@@ -305,7 +306,7 @@
             this.entryDateTimePicker.Name = "entryDateTimePicker";
             this.entryDateTimePicker.Size = new System.Drawing.Size(104, 20);
             this.entryDateTimePicker.TabIndex = 1;
-            this.entryDateTimePicker.Value = new System.DateTime(2020, 1, 28, 0, 0, 0, 0);
+            this.entryDateTimePicker.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             // 
             // MainForm
             // 
@@ -356,7 +357,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.DateTimePicker entryDateTimePicker;
     }
 }
