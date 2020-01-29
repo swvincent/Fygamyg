@@ -126,5 +126,5 @@ namespace fygwin
                 entryTextBox.Enabled = false;
             }
         }
-}
+    }
 }

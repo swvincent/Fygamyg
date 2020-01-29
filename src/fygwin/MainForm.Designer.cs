@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lookupLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lookupPanel = new System.Windows.Forms.Panel();
             this.entryTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.entriesListView = new System.Windows.Forms.ListView();
@@ -51,19 +51,23 @@
             this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.entryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.lookupPanel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.headerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lookupLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lookup:";
+            this.lookupLabel.AutoSize = true;
+            this.lookupLabel.Location = new System.Drawing.Point(1, 6);
+            this.lookupLabel.Name = "lookupLabel";
+            this.lookupLabel.Size = new System.Drawing.Size(46, 13);
+            this.lookupLabel.TabIndex = 0;
+            this.lookupLabel.Text = "Lookup:";
             // 
             // searchTextBox
             // 
@@ -82,47 +86,49 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.entryTextBox, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lookupPanel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.entryTextBox, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.entriesListView, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.headerPanel, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(760, 321);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(860, 521);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // panel1
+            // lookupPanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lookupPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.panel1, 3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.searchTextBox);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(754, 32);
-            this.panel1.TabIndex = 0;
+            this.tableLayoutPanel1.SetColumnSpan(this.lookupPanel, 3);
+            this.lookupPanel.Controls.Add(this.lookupLabel);
+            this.lookupPanel.Controls.Add(this.searchTextBox);
+            this.lookupPanel.Location = new System.Drawing.Point(3, 3);
+            this.lookupPanel.Name = "lookupPanel";
+            this.lookupPanel.Size = new System.Drawing.Size(854, 32);
+            this.lookupPanel.TabIndex = 0;
             // 
             // entryTextBox
             // 
             this.entryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entryTextBox.Location = new System.Drawing.Point(314, 41);
+            this.entryTextBox.Location = new System.Drawing.Point(354, 70);
             this.entryTextBox.Multiline = true;
             this.entryTextBox.Name = "entryTextBox";
-            this.entryTextBox.Size = new System.Drawing.Size(443, 248);
+            this.entryTextBox.Size = new System.Drawing.Size(503, 419);
             this.entryTextBox.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(682, 295);
+            this.button1.Location = new System.Drawing.Point(782, 495);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -143,7 +149,8 @@
             this.entriesListView.HideSelection = false;
             this.entriesListView.Location = new System.Drawing.Point(3, 41);
             this.entriesListView.Name = "entriesListView";
-            this.entriesListView.Size = new System.Drawing.Size(293, 248);
+            this.tableLayoutPanel1.SetRowSpan(this.entriesListView, 2);
+            this.entriesListView.Size = new System.Drawing.Size(333, 448);
             this.entriesListView.TabIndex = 4;
             this.entriesListView.UseCompatibleStateImageBehavior = false;
             this.entriesListView.View = System.Windows.Forms.View.Details;
@@ -182,7 +189,7 @@
             this.helpToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(884, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -268,22 +275,57 @@
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
             // 
+            // headerPanel
+            // 
+            this.headerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.headerPanel.Controls.Add(this.entryDateTimePicker);
+            this.headerPanel.Controls.Add(this.textBox1);
+            this.headerPanel.Location = new System.Drawing.Point(354, 41);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(503, 23);
+            this.headerPanel.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(2, 1);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(391, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // entryDateTimePicker
+            // 
+            this.entryDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.entryDateTimePicker.CustomFormat = "";
+            this.entryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.entryDateTimePicker.Location = new System.Drawing.Point(399, 1);
+            this.entryDateTimePicker.Name = "entryDateTimePicker";
+            this.entryDateTimePicker.Size = new System.Drawing.Size(104, 20);
+            this.entryDateTimePicker.TabIndex = 1;
+            this.entryDateTimePicker.Value = new System.DateTime(2020, 1, 28, 0, 0, 0, 0);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "Fygamyg";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.lookupPanel.ResumeLayout(false);
+            this.lookupPanel.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,10 +333,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lookupLabel;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel lookupPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox entryTextBox;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -313,5 +355,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker entryDateTimePicker;
     }
 }
