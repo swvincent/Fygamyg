@@ -15,8 +15,8 @@ namespace fygwin
 {
     public partial class MainForm : Form
     {
-        private string lastSearchText;
         private Reference bibleRef;
+        private JournalEntry currentJournalEntry;
 
         public MainForm()
         {
@@ -75,6 +75,7 @@ namespace fygwin
                 var values = new string[] { r.Book.BookName, r.ChapterText, r.VersesText, r.Title };
 
                 var l = new ListViewItem(values);
+                l.Tag = r;
 
                 entriesListView.Items.Add(l);
             }
@@ -98,5 +99,32 @@ namespace fygwin
                 return helper.GetJournalEntries(r.Book.BookNumber, r.Chapter, beginVerse, endVerse);
             }
         }
-    }
+
+        private void EntriesListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (entriesListView.SelectedItems.Count > 0)
+            {
+                var j = (JournalEntry)entriesListView.SelectedItems[0].Tag;
+                LoadAndDisplayJournalEntry(j);
+            }
+            else
+                LoadAndDisplayJournalEntry();
+        }
+
+        private void LoadAndDisplayJournalEntry(JournalEntry j = null)
+        {
+            currentJournalEntry = j;
+
+            if (currentJournalEntry != null)
+            {
+                entryTextBox.Text = currentJournalEntry.NoteText;
+                entryTextBox.Enabled = true;
+            }
+            else
+            {
+                entryTextBox.Clear();
+                entryTextBox.Enabled = false;
+            }
+        }
+}
 }

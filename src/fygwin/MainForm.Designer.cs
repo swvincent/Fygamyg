@@ -147,6 +147,7 @@
             this.entriesListView.TabIndex = 4;
             this.entriesListView.UseCompatibleStateImageBehavior = false;
             this.entriesListView.View = System.Windows.Forms.View.Details;
+            this.entriesListView.SelectedIndexChanged += new System.EventHandler(this.EntriesListView_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
