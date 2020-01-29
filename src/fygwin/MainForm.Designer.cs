@@ -40,7 +40,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.mainToolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -56,7 +56,7 @@
             this.entryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.lookupPanel.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.mainToolStrip.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,14 +91,14 @@
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.entriesListView, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.headerPanel, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 28);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 45);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(860, 521);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(860, 509);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // lookupPanel
@@ -122,13 +122,13 @@
             this.entryTextBox.Location = new System.Drawing.Point(354, 70);
             this.entryTextBox.Multiline = true;
             this.entryTextBox.Name = "entryTextBox";
-            this.entryTextBox.Size = new System.Drawing.Size(503, 419);
+            this.entryTextBox.Size = new System.Drawing.Size(503, 407);
             this.entryTextBox.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(782, 495);
+            this.button1.Location = new System.Drawing.Point(782, 483);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -151,7 +151,7 @@
             this.entriesListView.MultiSelect = false;
             this.entriesListView.Name = "entriesListView";
             this.tableLayoutPanel1.SetRowSpan(this.entriesListView, 2);
-            this.entriesListView.Size = new System.Drawing.Size(333, 448);
+            this.entriesListView.Size = new System.Drawing.Size(333, 436);
             this.entriesListView.TabIndex = 4;
             this.entriesListView.UseCompatibleStateImageBehavior = false;
             this.entriesListView.View = System.Windows.Forms.View.Details;
@@ -175,9 +175,10 @@
             this.columnHeader4.Text = "Title";
             this.columnHeader4.Width = 120;
             // 
-            // toolStrip1
+            // mainToolStrip
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainToolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.mainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
             this.openToolStripButton,
             this.saveToolStripButton,
@@ -188,11 +189,11 @@
             this.pasteToolStripButton,
             this.toolStripSeparator1,
             this.helpToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(884, 25);
-            this.toolStrip1.TabIndex = 3;
-            this.toolStrip1.Text = "toolStrip1";
+            this.mainToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.mainToolStrip.Name = "mainToolStrip";
+            this.mainToolStrip.Size = new System.Drawing.Size(884, 39);
+            this.mainToolStrip.TabIndex = 3;
+            this.mainToolStrip.Text = "toolStrip1";
             // 
             // newToolStripButton
             // 
@@ -200,7 +201,7 @@
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton.Size = new System.Drawing.Size(36, 36);
             this.newToolStripButton.Text = "&New";
             // 
             // openToolStripButton
@@ -313,7 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.mainToolStrip);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "MainForm";
@@ -323,8 +324,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.lookupPanel.ResumeLayout(false);
             this.lookupPanel.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.mainToolStrip.ResumeLayout(false);
+            this.mainToolStrip.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -340,7 +341,7 @@
         private System.Windows.Forms.Panel lookupPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox entryTextBox;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip mainToolStrip;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
         private System.Windows.Forms.ToolStripButton openToolStripButton;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
