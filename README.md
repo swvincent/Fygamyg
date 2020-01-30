@@ -1,6 +1,6 @@
 # Fygamyg
 
-Fygamyg is a bible journaling application I started but decided not to finish. I've chosen instead to use the [Crossway Digital Scripture Journal](https://www.crossway.org/digitalscripturejournal) instead:
+Fygamyg is a bible journaling application I started but decided not to finish. I've chosen instead to use the [Crossway Digital Scripture Journal](https://www.crossway.org/digitalscripturejournal) instead.
 
 I'm leaving this here in case I decided to do anything with it in the future.
 
